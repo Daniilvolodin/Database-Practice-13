@@ -16,10 +16,8 @@
             
         </div>    <!-- / main -->
         
+        <?php include("content/footer.php"); ?>
 
-        <div class="box footer">
-            CC yourname 20XX
-        </div>    <!-- / footer -->
     
     </div>  <!-- / wrapper  -->
     
