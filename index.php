@@ -12,7 +12,16 @@
 
         
         <div class="box main">
-            <?php include("content/home.php"); ?>
+            <?php 
+            
+            if(!isset($_REQUEST['page'])){
+                include("content/home.php";)
+            } // end of if that includes home page
+            else {
+                // prevents users from navigating through file system
+                $page=preg_replace('/[^0-9a-zA-z]-/', '', $_REQUEST['page']);
+            } // end of else that includes requested content
+            ?>
             
         </div>    <!-- / main -->
         
