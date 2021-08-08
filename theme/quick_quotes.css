@@ -72,7 +72,7 @@ body {
 
 .linkwrapper {
     display: grid;
-    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-columns: 1fr 300px 200px;
     grid-template-areas: 
         "commonsearches topsearch topadmin";
     grid-gap: 4px;
@@ -95,7 +95,7 @@ body {
 }
 
 /* Make navigation responsive... */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .linkwrapper {
         grid-template-columns: auto;
         grid-template-rows: auto;
@@ -191,7 +191,7 @@ form {
 
 
 input[type="submit"]:hover {
-    background-color: #000;
+    background-color: rgba(192, 189, 189, 0.87);
 }
 
 
@@ -200,11 +200,111 @@ input {
     padding: 10px;
     display: inline-block;
     border: 1px solid #000;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    width: 95%; 
 }
 
 
 .quicksearch {
     border-radius: 5px 0 0 5px; 
     display: inline-block;
+}
+
+/* #### Results styling, includes 'tags' buttons #### */
+.results {
+    background-color: rgb(255, 255, 255);
+    border: solid 1px rgb(0, 225, 255);
+    padding: 10px;
+
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+.tag {
+    background-color: bisque;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.about {
+    background-color: transparent;
+    border: solid 1 px #d37000;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.error {
+    background-color: #ffcece;
+    color: #721a1a;
+    border-radius: 10px;
+    padding: 10px;
+    border: solid 1px #721a1a;
+}
+
+/* editing tools formatting */
+.edit-tools {
+    text-align: right;
+    padding-right: 20px;
+} 
+
+/* Form Formatting css */
+
+/* make height of drop downs slightly larger */
+
+select {
+    height: 40px;
+    padding: 5px;
+} 
+
+/* controls input field on autocomplete boxes (pink for an error,
+white for OK */
+
+input.tag-error[type=text] {
+    background-color: #ff9e9e;
+}
+
+input.tag-ok[type=text] {
+    background-color: #fff;
+}
+input.short {
+    width: 100px;
+}
+/* field backgrounds */
+.form-ok {
+    background-color: #fff;
+}
+
+.form-error {
+    background-color: #ff9e9e;
+}
+
+/* error messages */
+.no-error {
+    display: none;
+}
+
+.error-text {
+    color: darkred;
+}
+
+textarea,
+input[type=text] {
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+}
+
+textarea {
+    width: 90%;
+    max-width: 700px;
+}
+
+.add-field {
+    width: 90%;
+}
+
+.gender {
+    width: 95%;
 }
